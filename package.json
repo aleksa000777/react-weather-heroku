@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config ./webpack.config.js --progress --colors",
     "production": "webpack -p",
     "start": "webpack-dev-server"
   },
