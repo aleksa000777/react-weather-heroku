@@ -1,3 +1,4 @@
+'use strict';
 var axios = require('axios');
 
 var _baseURL = 'http://api.openweathermap.org/data/2.5/';
@@ -27,7 +28,7 @@ function getCurrentWeather(city){
   var queryStringData = getQueryStringData(city);
   var url = prepUrl('weather', queryStringData)
 
-  return axios.post(url)
+  return fetch(url)
     .then(function(currentWeatherData){
       return currentWeatherData.data;
     })

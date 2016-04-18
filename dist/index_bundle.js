@@ -30395,7 +30395,7 @@
 	  var queryStringData = getQueryStringData(city);
 	  var url = prepUrl('weather', queryStringData);
 
-	  return axios.post(url).then(function (currentWeatherData) {
+	  return fetch(url).then(function (currentWeatherData) {
 	    return currentWeatherData.data;
 	  });
 	}
