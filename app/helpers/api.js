@@ -19,7 +19,8 @@ function getQueryStringData(city){
     q: city,
     type: 'accurate',
     APPID: _APIKEY,
-    cnt: 5
+    cnt: 5,
+    ssl : true
   }
 }
 
