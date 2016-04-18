@@ -30387,7 +30387,8 @@
 	    q: city,
 	    type: 'accurate',
 	    APPID: _APIKEY,
-	    cnt: 5
+	    cnt: 5,
+	    ssl: true
 	  };
 	}
 
@@ -30395,7 +30396,7 @@
 	  var queryStringData = getQueryStringData(city);
 	  var url = prepUrl('weather', queryStringData);
 
-	  return axios.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=b1b15e88fa797225412429c1c50c122a').then(function (currentWeatherData) {
+	  return axios.post(url).then(function (currentWeatherData) {
 	    return currentWeatherData.data;
 	  });
 	}
