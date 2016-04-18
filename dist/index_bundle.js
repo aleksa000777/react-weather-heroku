@@ -30369,7 +30369,7 @@
 
 	var axios = __webpack_require__(416);
 
-	var _baseURL = '//api.openweathermap.org/data/2.5/';
+	var _baseURL = 'http://api.openweathermap.org/data/2.5/';
 	var _APIKEY = 'd501a0f99eabcb1ce51db5dd35edd822';
 
 	function prepRouteParams(queryStringData) {
