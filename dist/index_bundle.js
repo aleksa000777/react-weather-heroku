@@ -30369,7 +30369,7 @@
 
 	var axios = __webpack_require__(416);
 
-	var _baseURL = 'http://api.openweathermap.org/data/2.5/';
+	var _baseURL = '//api.openweathermap.org/data/2.5/';
 	var _APIKEY = 'd501a0f99eabcb1ce51db5dd35edd822';
 
 	function prepRouteParams(queryStringData) {
@@ -30388,7 +30388,8 @@
 	    type: 'accurate',
 	    APPID: _APIKEY,
 	    cnt: 5,
-	    ssl: true
+	    ssl: true,
+	    headers: 'Access-Control-Allow-Origin: *'
 	  };
 	}
 
@@ -30396,7 +30397,7 @@
 	  var queryStringData = getQueryStringData(city);
 	  var url = prepUrl('weather', queryStringData);
 
-	  return axios.post(url).then(function (currentWeatherData) {
+	  return axios.get(url).then(function (currentWeatherData) {
 	    return currentWeatherData.data;
 	  });
 	}
