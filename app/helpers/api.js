@@ -28,7 +28,7 @@ function getCurrentWeather(city){
   var queryStringData = getQueryStringData(city);
   var url = prepUrl('weather', queryStringData)
 
-  return axios.get(url)
+  return axios.post(url)
     .then(function(currentWeatherData){
       return currentWeatherData.data;
     })

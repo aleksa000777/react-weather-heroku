@@ -30387,7 +30387,8 @@
 	    q: city,
 	    type: 'accurate',
 	    APPID: _APIKEY,
-	    cnt: 5
+	    cnt: 5,
+	    ssl: true
 	  };
 	}
 
@@ -30395,7 +30396,7 @@
 	  var queryStringData = getQueryStringData(city);
 	  var url = prepUrl('weather', queryStringData);
 
-	  return axios.get(url).then(function (currentWeatherData) {
+	  return axios.post(url).then(function (currentWeatherData) {
 	    return currentWeatherData.data;
 	  });
 	}
