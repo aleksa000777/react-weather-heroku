@@ -20,7 +20,8 @@ function getQueryStringData(city){
     type: 'accurate',
     APPID: _APIKEY,
     cnt: 5,
-    ssl : true
+    ssl : true,
+    headers: 'Access-Control-Allow-Origin: *'
   }
 }
 
