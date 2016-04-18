@@ -19,15 +19,16 @@ function getQueryStringData(city){
     q: city,
     type: 'accurate',
     APPID: _APIKEY,
-    cnt: 5
+    cnt: 5,
+    ssl : true
   }
 }
 
 function getCurrentWeather(city){
   var queryStringData = getQueryStringData(city);
-  var url = prepUrl('weather', queryStringData);
-  
-  return axios.get(url)
+  var url = prepUrl('weather', queryStringData)
+
+  return axios.post(url)
     .then(function(currentWeatherData){
       return currentWeatherData.data;
     })
