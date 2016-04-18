@@ -7,7 +7,7 @@ var GetCityContainer = require('../containers/GetCityContainer');
 var styles = {
   container: {
     backgroundSize: 'cover',
-    backgroundImage: "url('app/images/bg.svg')",
+    backgroundImage: "url('https://s3.amazonaws.com/weather-react/bg.svg')",
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

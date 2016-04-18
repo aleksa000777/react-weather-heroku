@@ -3,6 +3,8 @@ var PropTypes = React.PropTypes;
 var utils = require('../helpers/utils');
 var getDate = utils.getDate;
 var convertTemp = utils.convertTemp;
+var AWS_URL_BASE="https://s3.amazonaws.com/weather-react/";
+
 
 var styles = {
   container: {
@@ -42,7 +44,7 @@ function DayItem(props){
   var icon = props.day.weather[0].icon;
   return (
     <div style={styles.dayContainer} onClick={props.handleClick}>
-      <img style={styles.weather} src={'./app/images/' + icon + '.svg'} alt="Weather" />
+      <img style={styles.weather} src={AWS_URL_BASE + icon + '.svg'} alt="Weather" />
       <h2 style={styles.subheader}>{date}</h2>
     </div>
   )

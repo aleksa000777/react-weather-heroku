@@ -30120,7 +30120,7 @@
 	var styles = {
 	  container: {
 	    backgroundSize: 'cover',
-	    backgroundImage: "url('app/images/bg.svg')",
+	    backgroundImage: "url('https://s3.amazonaws.com/weather-react/bg.svg')",
 	    display: 'flex',
 	    flexDirection: 'column',
 	    justifyContent: 'center',
@@ -30216,6 +30216,7 @@
 	var utils = __webpack_require__(414);
 	var getDate = utils.getDate;
 	var convertTemp = utils.convertTemp;
+	var AWS_URL_BASE = "https://s3.amazonaws.com/weather-react/";
 
 	var styles = {
 	  container: {
@@ -30256,7 +30257,7 @@
 	  return React.createElement(
 	    'div',
 	    { style: styles.dayContainer, onClick: props.handleClick },
-	    React.createElement('img', { style: styles.weather, src: './app/images/' + icon + '.svg', alt: 'Weather' }),
+	    React.createElement('img', { style: styles.weather, src: AWS_URL_BASE + icon + '.svg', alt: 'Weather' }),
 	    React.createElement(
 	      'h2',
 	      { style: styles.subheader },
@@ -30368,7 +30369,7 @@
 
 	var axios = __webpack_require__(416);
 
-	var _baseURL = 'https://api.openweathermap.org/data/2.5/';
+	var _baseURL = 'http://api.openweathermap.org/data/2.5/';
 	var _APIKEY = 'd501a0f99eabcb1ce51db5dd35edd822';
 
 	function prepRouteParams(queryStringData) {
@@ -31540,6 +31541,7 @@
 	var utils = __webpack_require__(414);
 	var getDate = utils.getDate;
 	var convertTemp = utils.convertTemp;
+	var AWS_URL_BASE = "https://s3.amazonaws.com/weather-react/";
 
 	var styles = {
 	  container: {
@@ -31586,7 +31588,7 @@
 	  return React.createElement(
 	    'div',
 	    { style: styles.dayContainer, onClick: props.handleClick },
-	    React.createElement('img', { style: styles.weather, src: './app/images/' + icon + '.svg', alt: 'Weather' }),
+	    React.createElement('img', { style: styles.weather, src: AWS_URL_BASE + icon + '.svg', alt: 'Weather' }),
 	    React.createElement(
 	      'h2',
 	      { style: styles.subheader },
