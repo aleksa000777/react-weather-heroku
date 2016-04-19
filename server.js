@@ -11,10 +11,17 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
-app.post('/requestData', function(req, res){
-  request('http://api.openweathermap.org/data/2.5/weather?q='+'Miami'+'&APPID=d501a0f99eabcb1ce51db5dd35edd822', function(err,response){
-    res.json(response.body)
-  })
+
+app.get('/requestDayly', function(req, res){
+  res.write('hello');
+  console.log("got the request");
+  // request('http://api.openweathermap.org/data/2.5/weather?q='+'Miami'+'&APPID=d501a0f99eabcb1ce51db5dd35edd822', function(err,response){
+  //   console.log('err');
+  //   console.log(err);
+  //   console.log('response');
+  //   console.log(response);
+    // res.json(response.body);
+  // })
 });
 
 var server = app.listen(app.get('port'), function () {

@@ -26,10 +26,9 @@ function getQueryStringData(city){
 function getCurrentWeather(city){
   var queryStringData = getQueryStringData(city);
   var url = prepUrl('weather', queryStringData)
-
-  return axios.post('/requestData')
+  console.log('Hello World');
+  return axios.post(url)
     .then(function(currentWeatherData){
-      console.log(currentWeatherData);
       return currentWeatherData.data;
     })
   /*
@@ -42,6 +41,14 @@ function getCurrentWeather(city){
 function getForecast(city){
   var queryStringData = getQueryStringData(city);
   var url = prepUrl('forecast/daily', queryStringData)
+
+  // here i start my try again
+  // var my_url="/requestDayly";
+  // return axios.get(my_url)
+  //   .then(function(forecastData){
+  //     console.log(url);
+  //     return forecastData.data;
+  //   })
 
   return axios.get(url)
     .then(function(forecastData){

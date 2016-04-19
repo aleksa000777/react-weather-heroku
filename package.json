@@ -25,7 +25,8 @@
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "react-router": "^2.0.1",
-    "request": "^2.72.0"
+    "request": "^2.72.0",
+    "webpack-strip": "^0.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.4",

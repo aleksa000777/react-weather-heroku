@@ -2,6 +2,7 @@
 // 2) Webpack needs to know which transformations to make on your code.
 // 3) Webpack needs to know to which location it should save the new transformed code.
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var WebpackStrip = require('webpack-strip');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html',
   filename: 'index.html',
@@ -16,7 +17,8 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
-      {test: /\.css$/, loader: "style-loader!css-loader"}
+      {test: /\.css$/, loader: "style-loader!css-loader"},
+      { test: /\.js$/, loader: WebpackStrip.loader('console.log', 'console.error') }
     ]
   },
   output: {
