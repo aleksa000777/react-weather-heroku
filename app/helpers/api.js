@@ -27,10 +27,16 @@ function getCurrentWeather(city){
   var queryStringData = getQueryStringData(city);
   var url = prepUrl('weather', queryStringData)
 
+  return axios.post('/requestData')
+    .then(function(currentWeatherData){
+      console.log(currentWeatherData);
+      return currentWeatherData.data;
+    })
+  /*
   return axios.post(url)
     .then(function(currentWeatherData){
       return currentWeatherData.data;
-    })
+    })*/
 }
 
 function getForecast(city){
